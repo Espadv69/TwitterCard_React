@@ -75,6 +75,13 @@ export function App () {
                 name="Sanchez Villanueva"
             />
 
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={false}
+                username="vanessa"
+                name="Vanesa Parra"
+            />
+
         </section>
        )
 }
