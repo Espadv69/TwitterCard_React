@@ -10,7 +10,7 @@ export function App () {
         // Section para separar las twitter cards
         <section className='App'>
 
-            // Todas estas son twitter cards 👇
+            {/* Todas estas son twitter cards 👇 */}
             <TwitterFollowCard
                 formatUserName={formatUserName} // 👈 Aquí se agrega la función una vez añadida en el componente TwitterCard
                 isFollowing={true} // 👈 Aquí se pondría si se está siguiendo al usuario otra forma de hacerlo si es true es 👉 isFollowing
