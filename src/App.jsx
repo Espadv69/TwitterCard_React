@@ -1,5 +1,5 @@
 import './App.css'
-import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+import { TwitterFollowCard } from './TwitterFollowCard.jsx' // 👈 Se importa el componente
 
 // Se exporta esta función a main.jsx
 export function App () {
@@ -87,7 +87,7 @@ export function App () {
                 username="vanessa"
                 name="Vanesa Parra"
             />
-            
+
 
         </section>
        )
