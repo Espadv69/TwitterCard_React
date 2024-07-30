@@ -12,10 +12,10 @@ export function App () {
 
             // Todas estas son twitter cards 👇
             <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={true}
-                username="midudev"
-                name="Miguel Ángel Durán"
+                formatUserName={formatUserName} // 👈 Aquí se agrega la función una vez añadida en el componente TwitterCard
+                isFollowing={true} // 👈 Aquí se pondría si se está siguiendo al usuario otra forma de hacerlo si es true es 👉 isFollowing
+                username="midudev" // 👈 Aquí se pondría el nombre de usuario, que a su vez, se buscará una imagen con este mismo nombre
+                name="Miguel Ángel Durán" // 👈 Aquí va el nombre completo
              />
 
             <TwitterFollowCard
