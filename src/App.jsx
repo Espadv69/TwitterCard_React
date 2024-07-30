@@ -40,6 +40,27 @@ export function App () {
                 name="Roberto Villa"
             />
 
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={false}
+                username="gregoria"
+                name="Gregoria Salamanca"
+            />
+
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={false}
+                username="elon_musk"
+                name="Elon Musk"
+            />
+
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={true}
+                username="hector"
+                name="Hector"
+            />
+
         </section>
        )
 }
