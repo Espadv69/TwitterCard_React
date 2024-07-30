@@ -23,7 +23,7 @@ export function App () {
                 formatUserName={formatUserName}
                 isFollowing={false}
                 username="aitor"
-                name="Aitor Díaz"
+                name="Aitor Sanchez"
             />
 
             <TwitterFollowCard
@@ -59,6 +59,20 @@ export function App () {
                 isFollowing={true}
                 username="hector"
                 name="Hector"
+            />
+
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={false}
+                username="espadv._"
+                name="Espadv Díaz"
+            />
+
+            <TwitterFollowCard
+                formatUserName={formatUserName}
+                isFollowing={true}
+                username="sanchez"
+                name="Sanchez Villanueva"
             />
 
         </section>
