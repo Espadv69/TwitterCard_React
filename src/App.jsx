@@ -1,10 +1,16 @@
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard.jsx'
+
+// Se exporta esta función a main.jsx
 export function App () {
+    // Se crea una función con el parametro username para agregarle un @
     const formatUserName = (username) => `@${username}`
+    // Se retorna los elementos a main.jsx para que renderice el componente
     return (
+        // Section para separar las twitter cards
         <section className='App'>
 
+            // Todas estas son twitter cards 👇
             <TwitterFollowCard
                 formatUserName={formatUserName}
                 isFollowing={true}
@@ -81,6 +87,7 @@ export function App () {
                 username="vanessa"
                 name="Vanesa Parra"
             />
+            
 
         </section>
        )
