@@ -11,3 +11,9 @@ body {
     color: whitesmoke;
     background: #121212;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
