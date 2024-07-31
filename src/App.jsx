@@ -3,8 +3,14 @@ import { TwitterFollowCard } from './TwitterFollowCard.jsx' // 👈 Se importa e
 
 // Se exporta esta función a main.jsx
 export function App () {
+
     // Se crea una función con el parametro username para agregarle un @
     const formatUserName = (username) => `@${username}`
+
+    // Una manera para pasar propiedades más rápido es haciendo un objeto con las props
+    const pheralb = { isFollowing: false, username: 'pheralb', name: 'Pablo Hernandez', formatUserName}
+    const aitor = { isFollowing: true, username: 'espadv._', name: 'Espadv Villa', formatUserName}
+
     // Se retorna los elementos a main.jsx para que renderice el componente
     return (
         // Section para separar las twitter cards
@@ -19,75 +25,12 @@ export function App () {
              />
 
             <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={true}
-                username="pheralb"
-                name="Pablo Hernandez"
+                {...pheralb} // 👈 Así le pasaría todo el objeto con propiedades
             />
 
             <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="aitor"
-                name="Aitor Sanchez"
+                {...aitor} // 👈 Aquí hago lo mismo que en la card de arriba
             />
-
-            {/* <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="pepe"
-                name="Pepe Biñuelas"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={true}
-                username="roberto"
-                name="Roberto Villa"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="gregoria"
-                name="Gregoria Salamanca"
-            /> */}
-
-            {/* <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="elon_musk"
-                name="Elon Musk"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={true}
-                username="hector"
-                name="Hector"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="espadv._"
-                name="Espadv Díaz"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={true}
-                username="sanchez"
-                name="Sanchez Villanueva"
-            />
-
-            <TwitterFollowCard
-                formatUserName={formatUserName}
-                isFollowing={false}
-                username="vanessa"
-                name="Vanesa Parra"
-            /> */}
-
 
         </section>
        )
