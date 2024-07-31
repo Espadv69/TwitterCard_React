@@ -28,6 +28,7 @@
 }
 
 .tw-followCard-button {
+    width: 130px;
     cursor: pointer;
     margin-left: 16px;
     border: 0;
@@ -38,6 +39,6 @@
 
 .is-following {
     background: transparent;
-    border: 2px solid whitesmoke;
+    border: 2px solid rgb(70, 70, 70);
     color: whitesmoke;
 }
