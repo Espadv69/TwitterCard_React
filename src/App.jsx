@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard.jsx' // 👈 Se importa el componente
 
@@ -8,8 +9,10 @@ export function App () {
     const formatUserName = (username) => `@${username}`
 
     // Una manera para pasar propiedades más rápido es haciendo un objeto con las props
-    const pheralb = { isFollowing: false, username: 'pheralb', name: 'Pablo Hernandez', formatUserName}
-    const aitor = { isFollowing: true, username: 'espadv._', name: 'Espadv Villa', formatUserName}
+    const pheralb = { formatUserName, username: 'pheralb', name: 'Pablo Hernandez' }
+
+    // Estado para cambiar nombre al usuario
+    const [name, setname] = useState('Aitor Díaz')
 
     // Se retorna los elementos a main.jsx para que renderice el componente
     return (
@@ -29,8 +32,16 @@ export function App () {
             />
 
             <TwitterFollowCard
-                {...aitor} // 👈 Aquí hago lo mismo que en la card de arriba
-            />
+                formatUserName={formatUserName}
+                username="aitordd"
+                name={name}
+             />
+
+             <button
+             onClick={() => setname('Pedro Villa')}
+             >
+                Cambiar nombre
+             </button>
 
         </section>
        )
