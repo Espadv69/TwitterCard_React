@@ -35,3 +35,9 @@
     padding: 6px 16px;
     font-weight: bold;
 }
+
+.is-following {
+    background: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+}
