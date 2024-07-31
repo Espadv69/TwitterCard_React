@@ -24,7 +24,7 @@ export function TwitterFollowCard ({ formatUserName, username, name}) { // 👈 
 
     // Función handleClick por si pulso el botón
     const handleClick = () => {
-        setIsFollowing(!isFollowing) // Aquí decimos que sí no está siguiendo y hace click cambie de false a true
+        setIsFollowing(!isFollowing) // 👈 Aquí decimos que sí no está siguiendo y hace click cambie de false a true
     }
 
     const imageSrc = `https://unavatar.io/${username}` // 👈 Aquí se crea una variable para recoger las imágenes que tenga el username
