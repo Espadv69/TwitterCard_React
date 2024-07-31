@@ -1,5 +1,16 @@
+// Importar utilidad / hook de React
+import { useState } from "react"
+
 // Se exporta esta función 👇 a App.jsx
-export function TwitterFollowCard ({ formatUserName, username, name, isFollowing }) { // 👈 Esta función recoge 4 parámetros
+export function TwitterFollowCard ({ formatUserName, username, name}) { // 👈 Esta función recoge 4 parámetros
+
+    // Creamos un estado 👇 manera larga
+    // { const state = useState(false)
+    // const isFollowing = state[0]
+    // const setIsFollowing = state[1] }
+
+    //Manera corta 👇
+    const [isFollowing, setIsFollowing] = useState(false)
 
     // Ternaria para cambiar al texto de mi botón
     const text = isFollowing ? 'Siguiendo' : 'Seguir'
@@ -10,6 +21,11 @@ export function TwitterFollowCard ({ formatUserName, username, name, isFollowing
     : 'tw-followCard-button '
 
     console.log(isFollowing) // 👈 Aquí muestra en consola a los que se sigue en Boolean
+
+    // Función handleClick por si pulso el botón
+    const handleClick = () => {
+        setIsFollowing(!isFollowing) // Aquí decimos que sí no está siguiendo y hace click cambie de false a true
+    }
 
     const imageSrc = `https://unavatar.io/${username}` // 👈 Aquí se crea una variable para recoger las imágenes que tenga el username
     
@@ -29,6 +45,7 @@ export function TwitterFollowCard ({ formatUserName, username, name, isFollowing
             <aside>
                 <button
                     className={buttonClassName}
+                    onClick={handleClick}
                 >
                     {text}
                 </button>
